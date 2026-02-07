@@ -1,0 +1,110 @@
+@import url('https://fonts.cdnfonts.com/css/adelia-free');
+@import url('https://db.onlinewebfonts.com/c/548e3fcd0726d866e003f06fdbb36664?family=Magofah');
+@import url('https://db.onlinewebfonts.com/c/ab03577c77168e015d932ec76a15f58e?family=Atelier+Femme+Script');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "RoyalWedding";
+  src: url("/fonts/RoyalWedding.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+  
+
+.font-royal-wedding {
+  font-family: "Royal Wedding", cursive;
+}
+
+
+@layer base {
+  :root {
+    --background: 340 60% 20%;
+    --foreground: 340 20% 95%;
+
+    --card: 340 50% 25%;
+    --card-foreground: 340 20% 95%;
+
+    --popover: 340 50% 25%;
+    --popover-foreground: 340 20% 95%;
+
+    --primary: 340 80% 65%;
+    --primary-foreground: 340 60% 15%;
+
+    --secondary: 350 50% 30%;
+    --secondary-foreground: 340 20% 95%;
+
+    --muted: 340 40% 28%;
+    --muted-foreground: 340 30% 70%;
+
+    --accent: 330 70% 55%;
+    --accent-foreground: 340 20% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 40% 35%;
+    --input: 340 40% 35%;
+    --ring: 340 80% 65%;
+
+    --radius: 1rem;
+
+    --valentine-gradient: linear-gradient(135deg, hsl(340, 60%, 18%), hsl(350, 55%, 28%), hsl(330, 50%, 22%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-adelia {
+    font-family: 'Adelia', cursive;
+  }
+
+  .font-magofah {
+    font-family: 'Magofah', serif;
+  }
+
+  .font-atelier {
+    font-family: 'Atelier Femme Script', cursive;
+    font-style: italic;
+  }
+}
+
+/* Typing cursor blink */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: hsl(340, 80%, 65%); }
+}
+
+.typing-cursor {
+  border-right: 3px solid hsl(340, 80%, 65%);
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Envelope animations */
+@keyframes envelope-open {
+  0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(180deg); }
+}
+
+@keyframes letter-rise {
+  0% { transform: translateY(0); opacity: 0; }
+  100% { transform: translateY(-60px); opacity: 1; }
+}
+
+/* Floating hearts */
+@keyframes float-heart {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-20px) scale(1.1); opacity: 1; }
+}
